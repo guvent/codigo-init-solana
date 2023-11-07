@@ -1,0 +1,26 @@
+cidl: "0.8"
+info:
+  name: counter
+  title: Demo Counter
+  version: 0.0.1
+  license:
+    name: MIT
+    identifier: MIT
+types:
+  GreetingAccount:
+    fields:
+      - name: counter
+        type: u32
+methods:
+  - name: increment
+    inputs: 
+    - name: greeting_account
+      type: GreetingAccount
+    solana:
+      attributes: [mut, init_if_needed]
+  - name: decrement
+    inputs: 
+    - name: greeting_account
+      type: GreetingAccount
+    solana:
+     attributes: [mut, init_if_needed]
